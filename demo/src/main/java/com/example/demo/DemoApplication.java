@@ -16,13 +16,6 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@GetMapping
-	public List<User> hello()  {
-		return List.of(
-			new User(
-				1L,"yazan","hawamdy@gmail.com"
-			)
-		);
-	}
+
 
 }
