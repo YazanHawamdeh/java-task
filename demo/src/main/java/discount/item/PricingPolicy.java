@@ -2,8 +2,7 @@ package discount.item;
 
 import com.example.demo.Item;
 import com.example.demo.ItemType;
-import shopping.core.Item;
-import shopping.core.ItemType;
+
 
 /*
  * Class to implement pricing at item level

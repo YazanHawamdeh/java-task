@@ -56,17 +56,18 @@ public class Cart {
         Item item;
 
         // Apply 30% discount in case of employee of store
-        if (user.getRole() == UserType.EMPLOYEE) {
+        if (user.getType() == UserType.EMPLOYEE) {
             item = new PromotionPricing(itemToBuy, 30);
         }
         // Apply 10% discount in case of affiliate
-        else if (user.getRole() == UserType.AFFILIATE) {
+        else if (user.getType() == UserType.AFFILIATE) {
             item = new PromotionPricing(itemToBuy, 10);
         }
 
         // If a user has been a customer for 2 or more years apply 5% discount
-        else if (user.getType() == UserType.SIMPLE &&
-                ChronoUnit.YEARS.between(user.getJoiningDate(), LocalDateTime.now()) >= 2) {
+        else if (user.getType() == UserType.SIMPLE
+//                && ChronoUnit.YEARS.between(user.getJoiningDate(), LocalDateTime.now()) >= 2
+        ) {
             item = new PromotionPricing(itemToBuy, 5);
         }
 
